@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="half-div" style="margin-right: 10px;">
+            <h2>1. File Upload</h2>
+            <input type="file" id="fileInput" accept=".csv, .json" onchange="handleFileUpload()" />
+            <p style="font-size: 14px;">Supported File Type(s): .CSV, .JSON</p>
+            <br>
+            <div id="fileInfoSection"></div>
+        </div>
+
+        <div class="half-div" style="margin-left: 10px">
+            <h2>2. Specify Format</h2>
+            <label for="formatDropdown">File Format:</label>
+            <select id="formatDropdown">
+                <option value="csv">CSV</option>
+                <option value="json">JSON</option>
+            </select>
+
+            <br>
+            <br>
+
+            <label for="encodingDropdown">Character Encoding:</label>
+            <select id="encodingDropdown">
+                <option value="utf-8">UTF-8</option>
+                <option value="utf-16">UTF-16</option>
+            </select>
+
+            <br>
+            <br>
+
+            <label for="delimiterDropdown">Delimiter:</label>
+            <select id="delimiterDropdown">
+                <option value=",">Comma (,)</option>
+                <option value=";">Semicolon (;)</option>
+                <option value="\t">Tab (\t)</option>
+            </select>
+
+            <br>
+            <br>
+
+            <input type="checkbox" id="hasHeaderCheckbox" />
+            <label for="hasHeaderCheckbox">File has header</label>
+        </div>
+    </div>
+
+    <div class="full-div">
+        <h2>3. Display Handling</h2>
+        <div id="columnSelector" style="text-transform: capitalize">
+            <!-- Dynamic column checkboxes will be added here -->
+        </div>
+
+        <div id="selectedColumnsTable" style="text-transform: capitalize">
+            <!-- Dynamic table will be added here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

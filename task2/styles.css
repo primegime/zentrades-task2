@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    background-color: #f2f2f2;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+}
+
+.half-div {
+    flex: 1;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.full-div {
+    flex: 1;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#fileInput,
+#formatDropdown,
+#encodingDropdown,
+#delimiterDropdown,
+#hasHeaderCheckbox {
+    margin-bottom: 20px;
+}
+
+#columnSelector {
+    width: 200px;
+}
+
+#selectedColumnsTable {
+    flex: 1;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th, td {
+    padding: 8px;
+}
